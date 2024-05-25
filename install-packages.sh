@@ -1,0 +1,1 @@
+sudo apt update && sudo apt upgrade && sudo apt install build-essential gdb cmake git curl wget zathura zathura-cb zathura-djvu zathura-ps zathura-pdf-poppler python3-pip python3 python3-venv texlive-full zsh tmux checkinstall libssl-dev zlib1g zlib1g-dev ripgrep unzip zip rar unrar tree libffi-dev libffi8ubuntu1 libgmp-dev libgmp10 libncurses-dev
