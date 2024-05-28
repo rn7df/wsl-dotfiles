@@ -1,3 +1,6 @@
+-- transparent background
+vim.g.rasmus_transparent = true
+
 return {
   -- add rasmus
   {
