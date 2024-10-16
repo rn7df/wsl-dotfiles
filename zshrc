@@ -33,6 +33,13 @@ zinit snippet OMZP::command-not-found
 # Load completions
 autoload -Uz compinit && compinit
 
+# Bat
+export BAT_THEME=ansi
+alias cat="batcat"
+
+# Eza
+alias ls="eza --icons=always"
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -51,7 +58,12 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
-alias ls='ls --color'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias vim='nvim'
 alias c='clear'
 
@@ -63,9 +75,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Ruby Manager
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
-FPATH=~/.rbenv/completions:"$FPATH"
+# Julia
+path=('/home/w2nv7/.juliaup/bin' $path)
+export PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
